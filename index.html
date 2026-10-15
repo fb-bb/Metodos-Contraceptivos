@@ -2,13 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123F3D">
 <title>Entenda — Guia educativo de métodos contraceptivos</title>
 <meta name="description" content="Plataforma educativa sobre métodos contraceptivos: como funcionam, eficácia, vantagens e limitações, com base em fontes de saúde confiáveis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,14 +18,17 @@
 <header class="site-header" id="topo">
   <div class="wrap header-row">
     <a class="brand" href="#topo">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="32" height="32">
-          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.55"/>
-        </svg>
-      </span>
+      <svg class="brand-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.55"/>
+      </svg>
       <span class="brand-name">Entenda</span>
     </a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav">
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="sr-only">Menu</span>
+    </button>
 
     <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
       <ul>
@@ -35,31 +39,24 @@
         <li><a href="#fontes">Fontes</a></li>
       </ul>
     </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Abrir menu</span>
-    </button>
   </div>
 </header>
 
 <main id="conteudo">
 
-  <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="hero-kicker">Educação em saúde sexual e reprodutiva</p>
+        <p class="eyebrow">Educação em saúde sexual e reprodutiva</p>
         <h1 id="hero-title">Conhecer os métodos é o primeiro passo para escolher com segurança.</h1>
         <p class="hero-lede">Este é um espaço educativo, gratuito e independente, criado para explicar de forma clara como funcionam os principais métodos contraceptivos disponíveis hoje — sem julgamentos, sem achismos, com base em fontes de saúde reconhecidas.</p>
         <div class="hero-actions">
           <a href="#metodos" class="btn btn-primary">Conheça os métodos</a>
-          <a href="#videos" class="btn btn-ghost">Assistir aos vídeos</a>
         </div>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 420 420" class="hero-svg">
+        <svg viewBox="0 0 420 420" class="hero-svg" focusable="false">
           <circle cx="180" cy="170" r="120" class="ring ring-1"/>
           <circle cx="260" cy="250" r="90" class="ring ring-2"/>
           <circle cx="140" cy="280" r="55" class="ring ring-3"/>
@@ -72,62 +69,42 @@
     </div>
 
     <div class="wrap">
-      <div class="hero-strip">
-        <div class="strip-item">
-          <span class="strip-num">5</span>
-          <span class="strip-label">categorias de métodos explicadas</span>
-        </div>
-        <div class="strip-item">
-          <span class="strip-num">15+</span>
-          <span class="strip-label">métodos detalhados</span>
-        </div>
-        <div class="strip-item">
-          <span class="strip-num">OMS · OPAS</span>
-          <span class="strip-label">fontes de referência</span>
-        </div>
-      </div>
+      <dl class="hero-strip">
+        <div class="strip-item"><dt class="strip-num">5</dt><dd class="strip-label">categorias de métodos explicadas</dd></div>
+        <div class="strip-item"><dt class="strip-num">15+</dt><dd class="strip-label">métodos detalhados</dd></div>
+        <div class="strip-item"><dt class="strip-num">OMS · OPAS</dt><dd class="strip-label">fontes de referência</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- VISÃO GERAL -->
-  <section class="overview" aria-labelledby="overview-title">
+  <section class="section overview" aria-labelledby="overview-title">
     <div class="wrap">
       <h2 id="overview-title">Um panorama antes de entrar nos detalhes</h2>
       <p class="section-lede">Existem diferentes formas de evitar uma gravidez não planejada. Elas variam quanto ao modo de uso, à eficácia e à proteção contra infecções sexualmente transmissíveis (ISTs). Conhecer essas diferenças ajuda a conversar com mais clareza com um profissional de saúde.</p>
 
       <div class="overview-grid">
         <article class="overview-card">
-          <span class="overview-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><rect x="8" y="14" width="24" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 14v-2a6 6 0 0 1 12 0v2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          </span>
+          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="8" y="14" width="24" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 14v-2a6 6 0 0 1 12 0v2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
           <h3>Barreira</h3>
           <p>Impedem fisicamente o encontro entre espermatozoide e óvulo. Alguns também reduzem o risco de ISTs.</p>
         </article>
         <article class="overview-card">
-          <span class="overview-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="currentColor"/></svg>
-          </span>
+          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="currentColor"/></svg>
           <h3>Hormonais</h3>
           <p>Atuam regulando hormônios para impedir a ovulação. Exigem uso contínuo ou aplicação periódica.</p>
         </article>
         <article class="overview-card">
-          <span class="overview-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><path d="M20 8 L20 32 M13 12 Q20 8 27 12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          </span>
+          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 8 L20 32 M13 12 Q20 8 27 12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
           <h3>Intrauterinos</h3>
           <p>Dispositivos inseridos no útero por um profissional, com efeito de longa duração.</p>
         </article>
         <article class="overview-card">
-          <span class="overview-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><path d="M10 20h20M25 15l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
+          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M10 20h20M25 15l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <h3>Permanentes</h3>
           <p>Procedimentos cirúrgicos definitivos, indicados para quem já decidiu não ter mais filhos.</p>
         </article>
         <article class="overview-card">
-          <span class="overview-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><path d="M8 20a12 12 0 0 1 24 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20a12 12 0 0 0 24 0" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4"/></svg>
-          </span>
+          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M8 20a12 12 0 0 1 24 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20a12 12 0 0 0 24 0" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4"/></svg>
           <h3>Comportamentais</h3>
           <p>Baseiam-se na observação do ciclo menstrual, sem uso de medicamentos ou dispositivos.</p>
         </article>
@@ -139,43 +116,33 @@
     </div>
   </section>
 
-  <!-- MÉTODOS -->
-  <section class="methods" id="metodos" aria-labelledby="methods-title">
+  <section class="section section-alt methods" id="metodos" aria-labelledby="methods-title">
     <div class="wrap">
       <h2 id="methods-title">Métodos contraceptivos por categoria</h2>
       <p class="section-lede">Selecione uma categoria para explorar os métodos correspondentes. Cada card traz um resumo; use "Saiba mais" para ver detalhes completos.</p>
 
-      <div class="filter-tabs" role="tablist" aria-label="Filtrar por categoria">
-        <button class="filter-tab is-active" role="tab" aria-selected="true" data-filter="todos">Todos</button>
-        <button class="filter-tab" role="tab" aria-selected="false" data-filter="barreira">Barreira</button>
-        <button class="filter-tab" role="tab" aria-selected="false" data-filter="hormonal">Hormonais</button>
-        <button class="filter-tab" role="tab" aria-selected="false" data-filter="intrauterino">Intrauterinos</button>
-        <button class="filter-tab" role="tab" aria-selected="false" data-filter="permanente">Permanentes</button>
-        <button class="filter-tab" role="tab" aria-selected="false" data-filter="comportamental">Comportamentais</button>
+      <div class="filter-tabs" id="filterTabs" role="group" aria-label="Filtrar por categoria">
+        <button type="button" class="filter-tab is-active" aria-pressed="true" data-filter="todos">Todos</button>
+        <button type="button" class="filter-tab" aria-pressed="false" data-filter="barreira">Barreira</button>
+        <button type="button" class="filter-tab" aria-pressed="false" data-filter="hormonal">Hormonais</button>
+        <button type="button" class="filter-tab" aria-pressed="false" data-filter="intrauterino">Intrauterinos</button>
+        <button type="button" class="filter-tab" aria-pressed="false" data-filter="permanente">Permanentes</button>
+        <button type="button" class="filter-tab" aria-pressed="false" data-filter="comportamental">Comportamentais</button>
       </div>
+      <p class="sr-only" id="filterStatus" role="status"></p>
 
-      <div class="methods-grid" id="methodsGrid">
-        <!-- Cards inseridos via JavaScript a partir de dados estruturados -->
-      </div>
+      <div class="methods-grid" id="methodsGrid"></div>
     </div>
   </section>
 
-  <!-- MODAL DE DETALHES -->
-  <div class="modal-overlay" id="methodModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Fechar detalhes">&times;</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <!-- COMPARAÇÃO -->
-  <section class="compare" id="comparar" aria-labelledby="compare-title">
+  <section class="section compare" id="comparar" aria-labelledby="compare-title">
     <div class="wrap">
       <h2 id="compare-title">Compare os métodos</h2>
-      <p class="section-lede">Uma visão lado a lado de características-chave para apoiar a conversa com seu médico ou enfermeiro. Role a tabela horizontalmente em telas menores.</p>
+      <p class="section-lede">Uma visão lado a lado de características-chave para apoiar a conversa com seu médico ou enfermeiro. <span class="only-small">Em telas pequenas, deslize a tabela para o lado.</span></p>
 
-      <div class="table-scroll" tabindex="0" role="region" aria-label="Tabela comparativa de métodos contraceptivos">
-        <table class="compare-table" id="compareTable">
+      <div class="table-scroll" tabindex="0" role="region" aria-labelledby="compare-caption">
+        <table class="compare-table">
+          <caption id="compare-caption" class="sr-only">Comparação de métodos contraceptivos por tipo, duração, frequência de uso, proteção contra ISTs, eficácia e acompanhamento profissional</caption>
           <thead>
             <tr>
               <th scope="col">Método</th>
@@ -187,64 +154,38 @@
               <th scope="col">Acompanhamento profissional</th>
             </tr>
           </thead>
-          <tbody><!-- preenchido via JavaScript --></tbody>
+          <tbody id="compareBody"></tbody>
         </table>
       </div>
       <p class="table-footnote">*Valores aproximados com uso correto e consistente, com base em dados da OMS/OPAS. A eficácia no uso típico pode ser menor. Converse com um profissional de saúde para dados atualizados e individualizados.</p>
     </div>
   </section>
 
-  <!-- MITOS E VERDADES -->
-  <section class="myths" id="mitos" aria-labelledby="myths-title">
+  <section class="section section-alt myths" id="mitos" aria-labelledby="myths-title">
     <div class="wrap">
       <h2 id="myths-title">Mitos e verdades</h2>
-      <p class="section-lede">Clique em cada afirmação para revelar a explicação.</p>
-
-      <div class="myths-list" id="mythsList"><!-- preenchido via JavaScript --></div>
+      <p class="section-lede">Abra cada afirmação para revelar a explicação.</p>
+      <div class="acc-list" id="mythsList"></div>
     </div>
   </section>
 
-  <!-- PLAYER MODAL -->
-  <div class="modal-overlay" id="videoModal" aria-hidden="true">
-    <div class="modal modal-video" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
-      <button class="modal-close" id="videoModalClose" aria-label="Fechar vídeo">&times;</button>
-      <h3 id="videoModalTitle" class="sr-only">Player de vídeo</h3>
-      <div class="video-frame" id="videoFrame"></div>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <section class="faq" id="faq" aria-labelledby="faq-title">
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
     <div class="wrap wrap-narrow">
       <h2 id="faq-title">Perguntas frequentes</h2>
-
-      <div class="accordion" id="faqAccordion"><!-- preenchido via JavaScript --></div>
+      <div class="acc-list acc-plain" id="faqList"></div>
     </div>
   </section>
 
-  <!-- FONTES -->
-  <section class="sources" id="fontes" aria-labelledby="sources-title">
+  <section class="section section-alt sources" id="fontes" aria-labelledby="sources-title">
     <div class="wrap">
       <h2 id="sources-title">Fontes e referências</h2>
       <p class="section-lede">O conteúdo deste site foi elaborado com base em publicações de instituições de saúde reconhecidas. Nenhuma estatística foi inventada; onde há aproximação, isso é indicado no texto.</p>
 
       <ul class="sources-list">
-        <li>
-          <span class="source-name">Ministério da Saúde do Brasil</span>
-          <span class="source-desc">Diretrizes nacionais de planejamento reprodutivo e distribuição de métodos pelo SUS.</span>
-        </li>
-        <li>
-          <span class="source-name">Organização Mundial da Saúde (OMS)</span>
-          <span class="source-desc">Critérios de elegibilidade médica e dados globais de eficácia contraceptiva.</span>
-        </li>
-        <li>
-          <span class="source-name">Organização Pan-Americana da Saúde (OPAS)</span>
-          <span class="source-desc">Materiais educativos regionais sobre saúde sexual e reprodutiva.</span>
-        </li>
-        <li>
-          <span class="source-name">Federação Brasileira das Associações de Ginecologia e Obstetrícia (Febrasgo)</span>
-          <span class="source-desc">Recomendações clínicas para profissionais e pacientes.</span>
-        </li>
+        <li><span class="source-name">Ministério da Saúde do Brasil</span><span class="source-desc">Diretrizes nacionais de planejamento reprodutivo e distribuição de métodos pelo SUS.</span></li>
+        <li><span class="source-name">Organização Mundial da Saúde (OMS)</span><span class="source-desc">Critérios de elegibilidade médica e dados globais de eficácia contraceptiva.</span></li>
+        <li><span class="source-name">Organização Pan-Americana da Saúde (OPAS)</span><span class="source-desc">Materiais educativos regionais sobre saúde sexual e reprodutiva.</span></li>
+        <li><span class="source-name">Federação Brasileira das Associações de Ginecologia e Obstetrícia (Febrasgo)</span><span class="source-desc">Recomendações clínicas para profissionais e pacientes.</span></li>
       </ul>
       <p class="sources-disclaimer">Este conteúdo tem finalidade exclusivamente educativa e não substitui consulta, diagnóstico ou prescrição de um profissional de saúde qualificado.</p>
     </div>
@@ -252,33 +193,37 @@
 
 </main>
 
+<dialog class="modal" id="methodModal" aria-labelledby="modalTitle">
+  <form method="dialog"><button class="modal-close" aria-label="Fechar detalhes">&times;</button></form>
+  <div class="modal-inner" id="modalContent"></div>
+</dialog>
+
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28">
+      <div class="brand-static">
+        <svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
           <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
           <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.55"/>
         </svg>
-      </span>
-      <span class="brand-name">Entenda</span>
+        <span class="brand-name">Entenda</span>
+      </div>
       <p>Um guia educativo e independente sobre métodos contraceptivos, criado para ajudar pessoas a chegarem mais informadas à consulta com um profissional de saúde.</p>
     </div>
 
-    <nav class="footer-nav" aria-label="Links do rodapé">
-      <h4>Navegação</h4>
+    <nav class="footer-nav" aria-labelledby="footer-nav-title">
+      <h2 class="footer-title" id="footer-nav-title">Navegação</h2>
       <ul>
         <li><a href="#metodos">Métodos</a></li>
         <li><a href="#comparar">Comparar</a></li>
         <li><a href="#mitos">Mitos e verdades</a></li>
-        <li><a href="#videos">Vídeos</a></li>
         <li><a href="#faq">Dúvidas frequentes</a></li>
         <li><a href="#fontes">Fontes</a></li>
       </ul>
     </nav>
 
     <div class="footer-sources">
-      <h4>Referências</h4>
+      <h2 class="footer-title">Referências</h2>
       <ul>
         <li>Ministério da Saúde</li>
         <li>OMS</li>
@@ -288,7 +233,7 @@
     </div>
 
     <div class="footer-notice">
-      <h4>Aviso</h4>
+      <h2 class="footer-title">Aviso</h2>
       <p>Este site tem finalidade exclusivamente educativa. As informações aqui apresentadas não substituem orientação médica individualizada.</p>
     </div>
   </div>
@@ -298,6 +243,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

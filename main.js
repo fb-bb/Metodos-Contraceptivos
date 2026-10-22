@@ -16,6 +16,7 @@
   const status = $("#filterStatus");
 
   function renderMethods(filter = "todos") {
+    if (!grid) return;
     const items = filter === "todos" ? METHODS : METHODS.filter((m) => m.category === filter);
     grid.innerHTML = items.map((m) => `
       <article class="method-card">
@@ -33,7 +34,7 @@
         </div>
         <button type="button" class="btn btn-small" data-method="${m.id}" aria-label="Saiba mais sobre ${m.name}">Saiba mais</button>
       </article>`).join("");
-    status.textContent = `${items.length} métodos exibidos`;
+    if (status) status.textContent = `${items.length} métodos exibidos`;
   }
 
   const modal = $("#methodModal");
@@ -41,7 +42,7 @@
 
   function openMethod(id) {
     const m = METHODS.find((x) => x.id === id);
-    if (!m) return;
+    if (!m || !modalContent || !modal) return;
     modalContent.innerHTML = `
       <span class="modal-tag">${m.categoryLabel}</span>
       <h2 id="modalTitle" class="modal-title">${m.name}</h2>
@@ -57,37 +58,47 @@
     modal.scrollTop = 0;
   }
 
-  grid.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-method]");
-    if (btn) openMethod(btn.dataset.method);
-  });
-  
-  modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
-
-  $("#filterTabs").addEventListener("click", (e) => {
-    const tab = e.target.closest(".filter-tab");
-    if (!tab) return;
-    $$(".filter-tab").forEach((t) => {
-      const active = t === tab;
-      t.classList.toggle("is-active", active);
-      t.setAttribute("aria-pressed", String(active));
+  if (grid) {
+    grid.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-method]");
+      if (btn) openMethod(btn.dataset.method);
     });
-    renderMethods(tab.dataset.filter);
-  });
+  }
+  
+  if (modal) {
+    modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
+  }
+
+  const filterTabs = $("#filterTabs");
+  if (filterTabs) {
+    filterTabs.addEventListener("click", (e) => {
+      const tab = e.target.closest(".filter-tab");
+      if (!tab) return;
+      $$(".filter-tab").forEach((t) => {
+        const active = t === tab;
+        t.classList.toggle("is-active", active);
+        t.setAttribute("aria-pressed", String(active));
+      });
+      renderMethods(tab.dataset.filter);
+    });
+  }
 
   /* ---------- Tabela comparativa ---------- */
-  $("#compareBody").innerHTML = COMPARE_ROWS.map((r) => `
-    <tr>
-      <th scope="row">${r.name}</th>
-      <td>${r.type}</td>
-      <td>${r.duration}</td>
-      <td>${r.frequent}</td>
-      <td class="${r.ist ? "tag-yes" : "tag-no"}">${r.ist ? "Sim" : "Não"}</td>
-      <td>${r.efficacy}</td>
-      <td>${r.followup}</td>
-    </tr>`).join("");
+  const compareBody = $("#compareBody");
+  if (compareBody) {
+    compareBody.innerHTML = COMPARE_ROWS.map((r) => `
+      <tr>
+        <th scope="row">${r.name}</th>
+        <td>${r.type}</td>
+        <td>${r.duration}</td>
+        <td>${r.frequent}</td>
+        <td class="${r.ist ? "tag-yes" : "tag-no"}">${r.ist ? "Sim" : "Não"}</td>
+        <td>${r.efficacy}</td>
+        <td>${r.followup}</td>
+      </tr>`).join("");
+  }
 
-  /* ---------- Acordeões (details/summary nativo) ---------- */
+  /* ---------- Acordeões ---------- */
   const accordion = (items, badge) => items.map((item) => `
     <details class="acc-item">
       <summary><span>${item.q}</span><span class="acc-icon" aria-hidden="true"></span></summary>
@@ -97,25 +108,32 @@
       </div>
     </details>`).join("");
 
-  $("#mythsList").innerHTML = accordion(MYTHS, true);
-  $("#faqList").innerHTML = accordion(FAQ, false);
+  const mythsList = $("#mythsList");
+  if (mythsList) mythsList.innerHTML = accordion(MYTHS, true);
+
+  const faqList = $("#faqList");
+  if (faqList) faqList.innerHTML = accordion(FAQ, false);
 
   /* ---------- Menu mobile ---------- */
   const navToggle = $("#navToggle");
   const mainNav = $("#mainNav");
 
-  function setNav(open) {
-    mainNav.classList.toggle("is-open", open);
-    navToggle.classList.toggle("is-open", open);
-    navToggle.setAttribute("aria-expanded", String(open));
+  if (navToggle && mainNav) {
+    function setNav(open) {
+      mainNav.classList.toggle("is-open", open);
+      navToggle.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+    }
+    navToggle.addEventListener("click", () => setNav(!mainNav.classList.contains("is-open")));
+    mainNav.addEventListener("click", (e) => { if (e.target.closest("a")) setNav(false); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mainNav.classList.contains("is-open")) { setNav(false); navToggle.focus(); }
+    });
   }
-  navToggle.addEventListener("click", () => setNav(!mainNav.classList.contains("is-open")));
-  mainNav.addEventListener("click", (e) => { if (e.target.closest("a")) setNav(false); });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && mainNav.classList.contains("is-open")) { setNav(false); navToggle.focus(); }
-  });
 
   /* ---------- Rodapé e inicialização ---------- */
-  $("#year").textContent = new Date().getFullYear();
+  const yearEl = $("#year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  
   renderMethods();
 })();

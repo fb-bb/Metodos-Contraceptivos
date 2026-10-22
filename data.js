@@ -1,8 +1,5 @@
 /* =========================================================
    ENTENDA — Conteúdo (dados estruturados)
-   Eficácias aproximadas, uso correto e consistente, com base
-   em dados amplamente publicados por OMS/CDC. Valores de uso
-   típico tendem a ser mais baixos — sempre indicado como aproximado.
 ========================================================= */
 
 const METHODS = [
@@ -197,7 +194,7 @@ const MYTHS = [
 ];
 
 const FAQ = [
-  { q: "Qual é o método contraceptivo mais eficaz?", a: "Em geral, os métodos de longa duração — como DIU e implante — apresentam as maiores taxas de eficácia, porque dependem menos de ações diárias do usuário. Ainda assim, 'mais eficaz' não significa 'mais indicado para você': isso depende de fatores individuais avaliados por um profissional de saúde." },
+  { q: "Qual é o método contraceptivo mais eficaz?", a: "Em geral, os métodos de longa duração — como DIU e implante — apresentam as maiores taxas de eficácia, porque dependem menos de ações diárias do utilizador. Ainda assim, 'mais eficaz' não significa 'mais indicado para si': isso depende de fatores individuais avaliados por um profissional de saúde." },
   { q: "Posso combinar dois métodos ao mesmo tempo?", a: "Sim, e essa combinação é chamada de dupla proteção — geralmente um método de barreira (para prevenção de ISTs) junto de outro método (para reforço contraceptivo). Vale confirmar com um profissional quais combinações fazem sentido no seu caso." },
   { q: "Métodos contraceptivos têm efeitos colaterais?", a: "Alguns métodos hormonais podem causar efeitos como alterações de humor, sangramento irregular ou sensibilidade nas mamas em parte das pessoas. A intensidade varia de pessoa para pessoa, e um profissional de saúde pode ajudar a ajustar o método conforme a resposta do corpo." },
   { q: "A pílula do dia seguinte é um método contraceptivo de uso contínuo?", a: "Não. Ela é um recurso de emergência, indicado para situações pontuais (como falha do método usado ou relação sem proteção), e não substitui um método contraceptivo de uso regular." },

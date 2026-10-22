@@ -61,7 +61,7 @@
     const btn = e.target.closest("[data-method]");
     if (btn) openMethod(btn.dataset.method);
   });
-  // Fecha ao clicar no fundo (backdrop)
+  
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
 
   $("#filterTabs").addEventListener("click", (e) => {

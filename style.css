@@ -1,5 +1,5 @@
 /* =========================================================
-   ENTENDA — Design system (Mobile First)
+   ENTENDA — Design System (Mobile First)
    Paleta: petróleo profundo + névoa clara + âmbar contido
    Tipografia: Fraunces (títulos) + Inter (texto)
    Breakpoints: 600px · 768px · 1024px
@@ -177,7 +177,6 @@ button { font: inherit; color: inherit; }
 .compare-table tbody tr:hover { --row-bg: var(--brand-tint); }
 .compare-table tbody tr:last-child > * { border-bottom: 0; }
 .compare-table tbody th { font-weight: 600; color: var(--brand-dark); min-width: 150px; }
-/* Primeira coluna fixa durante a rolagem horizontal */
 .compare-table th:first-child { position: sticky; left: 0; z-index: 1; box-shadow: 1px 0 0 var(--border); }
 .tag-yes { color: var(--brand-dark); font-weight: 700; }
 .tag-no { color: var(--ink-soft); }
@@ -202,7 +201,6 @@ button { font: inherit; color: inherit; }
 .verdict-mito { background: var(--accent-tint); color: var(--accent-dark); }
 .verdict-verdade { background: var(--brand-tint); color: var(--brand-dark); }
 
-/* FAQ: visual mais editorial (linhas, sem cartões) */
 .acc-plain { max-width: none; gap: 0; }
 .acc-plain .acc-item { background: none; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; }
 .acc-plain .acc-item summary { padding-inline: 4px; font-family: var(--font-head); font-size: 1.08rem; color: var(--brand-dark); }
@@ -259,7 +257,7 @@ button { font: inherit; color: inherit; }
   .hero-visual { order: 0; max-width: 420px; }
   .overview-grid { grid-template-columns: repeat(5, 1fr); }
   .methods-grid { grid-template-columns: repeat(3, 1fr); }
-  .table-scroll { overflow-x: visible; }   /* cabe sem rolagem em desktop */
+  .table-scroll { overflow-x: visible; }
   .compare-table { min-width: 0; }
   .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 2.5rem; }
 }

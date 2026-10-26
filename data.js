@@ -1,5 +1,8 @@
 /* =========================================================
    ENTENDA — Conteúdo (dados estruturados)
+   Eficácias aproximadas, uso correto e consistente, com base
+   em dados amplamente publicados por OMS/CDC. Valores de uso
+   típico tendem a ser mais baixos — sempre indicado como aproximado.
 ========================================================= */
 
 const METHODS = [
@@ -194,23 +197,10 @@ const MYTHS = [
 ];
 
 const FAQ = [
-  { q: "Qual é o método contraceptivo mais eficaz?", a: "Em geral, os métodos de longa duração — como DIU e implante — apresentam as maiores taxas de eficácia, porque dependem menos de ações diárias do utilizador. Ainda assim, 'mais eficaz' não significa 'mais indicado para si': isso depende de fatores individuais avaliados por um profissional de saúde." },
+  { q: "Qual é o método contraceptivo mais eficaz?", a: "Em geral, os métodos de longa duração — como DIU e implante — apresentam as maiores taxas de eficácia, porque dependem menos de ações diárias do usuário. Ainda assim, 'mais eficaz' não significa 'mais indicado para você': isso depende de fatores individuais avaliados por um profissional de saúde." },
   { q: "Posso combinar dois métodos ao mesmo tempo?", a: "Sim, e essa combinação é chamada de dupla proteção — geralmente um método de barreira (para prevenção de ISTs) junto de outro método (para reforço contraceptivo). Vale confirmar com um profissional quais combinações fazem sentido no seu caso." },
   { q: "Métodos contraceptivos têm efeitos colaterais?", a: "Alguns métodos hormonais podem causar efeitos como alterações de humor, sangramento irregular ou sensibilidade nas mamas em parte das pessoas. A intensidade varia de pessoa para pessoa, e um profissional de saúde pode ajudar a ajustar o método conforme a resposta do corpo." },
   { q: "A pílula do dia seguinte é um método contraceptivo de uso contínuo?", a: "Não. Ela é um recurso de emergência, indicado para situações pontuais (como falha do método usado ou relação sem proteção), e não substitui um método contraceptivo de uso regular." },
   { q: "Onde posso obter os métodos contraceptivos gratuitamente?", a: "No Brasil, o Sistema Único de Saúde (SUS) disponibiliza diversos métodos contraceptivos gratuitamente em unidades básicas de saúde. Consulte a unidade mais próxima para saber quais estão disponíveis." },
   { q: "É seguro usar métodos contraceptivos por muitos anos seguidos?", a: "Para a maioria dos métodos, sim, desde que haja acompanhamento periódico com um profissional de saúde, que pode reavaliar a indicação ao longo do tempo conforme mudanças de saúde ou de necessidades." }
 ];
-
-const ICONS = {
-  condom: '<path d="M4 12a8 8 0 0 1 16 0"/><path d="M4 12v3a2 2 0 0 0 2 2h1"/><path d="M20 12v3a2 2 0 0 1-2 2h-1"/>',
-  shield: '<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/>',
-  pill: '<rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-25 12 12)"/><line x1="12" y1="8" x2="12" y2="16" transform="rotate(-25 12 12)"/>',
-  patch: '<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3"/>',
-  ring: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/>',
-  injection: '<path d="M19 5l-3-3-9 9-3 7 7-3 9-9z"/><line x1="13" y1="7" x2="17" y2="11"/>',
-  iud: '<path d="M12 3v10M8 6a4 4 0 0 1 8 0"/><circle cx="12" cy="18" r="3"/>',
-  implant: '<rect x="10" y="3" width="4" height="18" rx="2"/>',
-  surgery: '<path d="M6 6l12 12M6 18L18 6"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/>',
-  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/>'
-};

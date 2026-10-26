@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#123F3D">
 <title>Entenda — Guia educativo de métodos contraceptivos</title>
-<meta name="description" content="Plataforma educativa sobre métodos contraceptivos: como funcionam, eficácia, vantagens e limitações, com base em fontes de saúde confiáveis.">
+<meta name="description" content="Guia educativo sobre métodos contraceptivos: como funcionam, eficácia, vantagens e limitações, com base em fontes de saúde confiáveis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-<header class="site-header" id="topo">
-  <div class="wrap header-row">
-    <a class="brand" href="#topo">
-      <svg class="brand-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
-        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
-        <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.55"/>
-      </svg>
-      <span class="brand-name">Entenda</span>
-    </a>
-
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav">
-      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="sr-only">Menu</span>
-    </button>
-
-    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+<header class="top" id="topo">
+  <div class="wrap bar">
+    <a class="wordmark" href="#topo">Metodos contraceptivos</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Navegação principal">
       <ul>
         <li><a href="#metodos">Métodos</a></li>
         <li><a href="#comparar">Comparar</a></li>
@@ -44,206 +31,94 @@
 
 <main id="conteudo">
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Educação em saúde sexual e reprodutiva</p>
-        <h1 id="hero-title">Conhecer os métodos é o primeiro passo para escolher com segurança.</h1>
-        <p class="hero-lede">Este é um espaço educativo, gratuito e independente, criado para explicar de forma clara como funcionam os principais métodos contraceptivos disponíveis hoje — sem julgamentos, sem achismos, com base em fontes de saúde reconhecidas.</p>
-        <div class="hero-actions">
-          <a href="#metodos" class="btn btn-primary">Conheça os métodos</a>
-        </div>
-      </div>
+<section class="intro wrap" aria-labelledby="t-intro">
+  <div class="intro-text">
+    <p class="label">Saúde sexual e reprodutiva</p>
+    <h1 id="t-intro">Conhecer os métodos é o primeiro passo para escolher com segurança.</h1>
+    <p class="lede">Um material educativo, gratuito e independente, que explica como funcionam os principais métodos contraceptivos, sem julgamentos e com base em fontes de saúde reconhecidas.</p>
+    <p><a class="btn" href="#metodos">Ver os métodos</a></p>
+  </div>
+  <aside class="intro-note" aria-label="Aviso importante">
+    <p class="label">Antes de começar</p>
+    <p><strong>Nenhum método contraceptivo é 100% eficaz.</strong> A escolha depende de saúde, rotina e planos de cada pessoa e deve ser feita com orientação de um profissional de saúde.</p>
+    <p class="small">Este site não substitui consulta, diagnóstico ou prescrição.</p>
+  </aside>
+</section>
 
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 420 420" class="hero-svg" focusable="false">
-          <circle cx="180" cy="170" r="120" class="ring ring-1"/>
-          <circle cx="260" cy="250" r="90" class="ring ring-2"/>
-          <circle cx="140" cy="280" r="55" class="ring ring-3"/>
-          <path d="M 90 130 Q 210 40 330 130" class="arc"/>
-          <circle cx="180" cy="170" r="6" class="dot"/>
-          <circle cx="260" cy="250" r="6" class="dot"/>
-          <circle cx="140" cy="280" r="6" class="dot"/>
-        </svg>
-      </div>
-    </div>
+<section class="block wrap" aria-labelledby="t-cat">
+  <h2 id="t-cat">As cinco categorias</h2>
+  <p class="lede">Os métodos variam quanto ao modo de uso, à eficácia e à proteção contra infecções sexualmente transmissíveis (ISTs). Saber a diferença ajuda a conversar com mais clareza com quem cuida da sua saúde.</p>
+  <dl class="cats">
+    <div><dt>Barreira</dt><dd>Impedem fisicamente o encontro entre espermatozoide e óvulo. Alguns também reduzem o risco de ISTs.</dd></div>
+    <div><dt>Hormonais</dt><dd>Atuam regulando hormônios para impedir a ovulação. Exigem uso contínuo ou aplicação periódica.</dd></div>
+    <div><dt>Intrauterinos</dt><dd>Dispositivos inseridos no útero por um profissional, com efeito de longa duração.</dd></div>
+    <div><dt>Permanentes</dt><dd>Procedimentos cirúrgicos definitivos, indicados para quem já decidiu não ter mais filhos.</dd></div>
+    <div><dt>Comportamentais</dt><dd>Baseiam-se na observação do ciclo menstrual, sem uso de medicamentos ou dispositivos.</dd></div>
+  </dl>
+</section>
 
-    <div class="wrap">
-      <dl class="hero-strip">
-        <div class="strip-item"><dt class="strip-num">5</dt><dd class="strip-label">categorias de métodos explicadas</dd></div>
-        <div class="strip-item"><dt class="strip-num">15+</dt><dd class="strip-label">métodos detalhados</dd></div>
-        <div class="strip-item"><dt class="strip-num">OMS · OPAS</dt><dd class="strip-label">fontes de referência</dd></div>
-      </dl>
-    </div>
-  </section>
+<section class="block wrap" id="metodos" aria-labelledby="t-met">
+  <h2 id="t-met">Métodos, um a um</h2>
+  <p class="lede">Filtre por categoria e abra cada método para ver como funciona, vantagens e limitações.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar por categoria">
+    <button type="button" aria-pressed="true" data-f="todos">Todos</button>
+    <button type="button" aria-pressed="false" data-f="barreira">Barreira</button>
+    <button type="button" aria-pressed="false" data-f="hormonal">Hormonais</button>
+    <button type="button" aria-pressed="false" data-f="intrauterino">Intrauterinos</button>
+    <button type="button" aria-pressed="false" data-f="permanente">Permanentes</button>
+    <button type="button" aria-pressed="false" data-f="comportamental">Comportamentais</button>
+  </div>
+  <p class="sr" id="fstatus" role="status"></p>
+  <ul class="methods" id="methods"></ul>
+</section>
 
-  <section class="section overview" aria-labelledby="overview-title">
-    <div class="wrap">
-      <h2 id="overview-title">Um panorama antes de entrar nos detalhes</h2>
-      <p class="section-lede">Existem diferentes formas de evitar uma gravidez não planejada. Elas variam quanto ao modo de uso, à eficácia e à proteção contra infecções sexualmente transmissíveis (ISTs). Conhecer essas diferenças ajuda a conversar com mais clareza com um profissional de saúde.</p>
+<section class="block wrap" id="comparar" aria-labelledby="t-cmp">
+  <h2 id="t-cmp">Compare os métodos</h2>
+  <p class="lede">Características-chave lado a lado, para apoiar a conversa com seu médico ou enfermeiro. <span class="mobile-only">Deslize a tabela para o lado para ver todas as colunas.</span></p>
+  <div class="scroll" tabindex="0" role="region" aria-labelledby="cap">
+    <table>
+      <caption id="cap" class="sr">Comparação de métodos contraceptivos</caption>
+      <thead><tr>
+        <th scope="col">Método</th><th scope="col">Tipo</th><th scope="col">Duração do efeito</th><th scope="col">Uso frequente</th><th scope="col">Protege contra ISTs</th><th scope="col">Eficácia aproximada*</th><th scope="col">Acompanhamento profissional</th>
+      </tr></thead>
+      <tbody id="cmpBody"></tbody>
+    </table>
+  </div>
+  <p class="small">*Valores aproximados com uso correto e consistente, com base em dados da OMS/OPAS. A eficácia no uso típico pode ser menor. Converse com um profissional de saúde para dados atualizados e individualizados.</p>
+</section>
 
-      <div class="overview-grid">
-        <article class="overview-card">
-          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="8" y="14" width="24" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 14v-2a6 6 0 0 1 12 0v2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          <h3>Barreira</h3>
-          <p>Impedem fisicamente o encontro entre espermatozoide e óvulo. Alguns também reduzem o risco de ISTs.</p>
-        </article>
-        <article class="overview-card">
-          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="currentColor"/></svg>
-          <h3>Hormonais</h3>
-          <p>Atuam regulando hormônios para impedir a ovulação. Exigem uso contínuo ou aplicação periódica.</p>
-        </article>
-        <article class="overview-card">
-          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 8 L20 32 M13 12 Q20 8 27 12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          <h3>Intrauterinos</h3>
-          <p>Dispositivos inseridos no útero por um profissional, com efeito de longa duração.</p>
-        </article>
-        <article class="overview-card">
-          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M10 20h20M25 15l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <h3>Permanentes</h3>
-          <p>Procedimentos cirúrgicos definitivos, indicados para quem já decidiu não ter mais filhos.</p>
-        </article>
-        <article class="overview-card">
-          <svg class="overview-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M8 20a12 12 0 0 1 24 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20a12 12 0 0 0 24 0" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4"/></svg>
-          <h3>Comportamentais</h3>
-          <p>Baseiam-se na observação do ciclo menstrual, sem uso de medicamentos ou dispositivos.</p>
-        </article>
-      </div>
+<section class="block wrap narrow" id="mitos" aria-labelledby="t-mit">
+  <h2 id="t-mit">Mitos e verdades</h2>
+  <p class="lede">Abra cada pergunta para ler a resposta.</p>
+  <div class="acc" id="myths"></div>
+</section>
 
-      <div class="notice" role="note">
-        <p><strong>Nenhum método contraceptivo é 100% eficaz.</strong> A escolha ideal depende de fatores individuais de saúde, rotina e objetivos — por isso, deve sempre ser feita com orientação de um profissional de saúde.</p>
-      </div>
-    </div>
-  </section>
+<section class="block wrap narrow" id="faq" aria-labelledby="t-faq">
+  <h2 id="t-faq">Perguntas frequentes</h2>
+  <div class="acc" id="faqList"></div>
+</section>
 
-  <section class="section section-alt methods" id="metodos" aria-labelledby="methods-title">
-    <div class="wrap">
-      <h2 id="methods-title">Métodos contraceptivos por categoria</h2>
-      <p class="section-lede">Selecione uma categoria para explorar os métodos correspondentes. Cada card traz um resumo; use "Saiba mais" para ver detalhes completos.</p>
-
-      <div class="filter-tabs" id="filterTabs" role="group" aria-label="Filtrar por categoria">
-        <button type="button" class="filter-tab is-active" aria-pressed="true" data-filter="todos">Todos</button>
-        <button type="button" class="filter-tab" aria-pressed="false" data-filter="barreira">Barreira</button>
-        <button type="button" class="filter-tab" aria-pressed="false" data-filter="hormonal">Hormonais</button>
-        <button type="button" class="filter-tab" aria-pressed="false" data-filter="intrauterino">Intrauterinos</button>
-        <button type="button" class="filter-tab" aria-pressed="false" data-filter="permanente">Permanentes</button>
-        <button type="button" class="filter-tab" aria-pressed="false" data-filter="comportamental">Comportamentais</button>
-      </div>
-      <p class="sr-only" id="filterStatus" role="status"></p>
-
-      <div class="methods-grid" id="methodsGrid"></div>
-    </div>
-  </section>
-
-  <section class="section compare" id="comparar" aria-labelledby="compare-title">
-    <div class="wrap">
-      <h2 id="compare-title">Compare os métodos</h2>
-      <p class="section-lede">Uma visão lado a lado de características-chave para apoiar a conversa com o seu médico ou enfermeiro. <span class="only-small">Em ecrãs pequenos, desloque a tabela para o lado.</span></p>
-
-      <div class="table-scroll" tabindex="0" role="region" aria-labelledby="compare-caption">
-        <table class="compare-table">
-          <caption id="compare-caption" class="sr-only">Comparação de métodos contraceptivos por tipo, duração, frequência de uso, proteção contra ISTs, eficácia e acompanhamento profissional</caption>
-          <thead>
-            <tr>
-              <th scope="col">Método</th>
-              <th scope="col">Tipo</th>
-              <th scope="col">Duração do efeito</th>
-              <th scope="col">Uso frequente</th>
-              <th scope="col">Protege contra ISTs</th>
-              <th scope="col">Eficácia aproximada*</th>
-              <th scope="col">Acompanhamento profissional</th>
-            </tr>
-          </thead>
-          <tbody id="compareBody"></tbody>
-        </table>
-      </div>
-      <p class="table-footnote">*Valores aproximados com uso correto e consistente, com base em dados da OMS/OPAS. A eficácia no uso típico pode ser menor. Converse com um profissional de saúde para dados atualizados e individualizados.</p>
-    </div>
-  </section>
-
-  <section class="section section-alt myths" id="mitos" aria-labelledby="myths-title">
-    <div class="wrap">
-      <h2 id="myths-title">Mitos e verdades</h2>
-      <p class="section-lede">Abra cada afirmação para revelar a explicação.</p>
-      <div class="acc-list" id="mythsList"></div>
-    </div>
-  </section>
-
-  <section class="section faq" id="faq" aria-labelledby="faq-title">
-    <div class="wrap wrap-narrow">
-      <h2 id="faq-title">Perguntas frequentes</h2>
-      <div class="acc-list acc-plain" id="faqList"></div>
-    </div>
-  </section>
-
-  <section class="section section-alt sources" id="fontes" aria-labelledby="sources-title">
-    <div class="wrap">
-      <h2 id="sources-title">Fontes e referências</h2>
-      <p class="section-lede">O conteúdo deste site foi elaborado com base em publicações de instituições de saúde reconhecidas. Nenhuma estatística foi inventada; onde há aproximação, isso é indicado no texto.</p>
-
-      <ul class="sources-list">
-        <li><span class="source-name">Ministério da Saúde</span><span class="source-desc">Diretrizes nacionais de planejamento reprodutivo e distribuição de métodos pelo SUS.</span></li>
-        <li><span class="source-name">Organização Mundial da Saúde (OMS)</span><span class="source-desc">Critérios de elegibilidade médica e dados globais de eficácia contraceptiva.</span></li>
-        <li><span class="source-name">Organização Pan-Americana da Saúde (OPAS)</span><span class="source-desc">Materiais educativos regionais sobre saúde sexual e reprodutiva.</span></li>
-        <li><span class="source-name">Federação Brasileira das Associações de Ginecologia e Obstetrícia (Febrasgo)</span><span class="source-desc">Recomendações clínicas para profissionais e pacientes.</span></li>
-      </ul>
-      <p class="sources-disclaimer">Este conteúdo tem finalidade exclusivamente educativa e não substitui consulta, diagnóstico ou prescrição de um profissional de saúde qualificado.</p>
-    </div>
-  </section>
+<section class="block wrap narrow" id="fontes" aria-labelledby="t-src">
+  <h2 id="t-src">Fontes e referências</h2>
+  <p class="lede">O conteúdo foi elaborado com base em publicações de instituições de saúde reconhecidas. Nenhuma estatística foi inventada; onde há aproximação, isso é indicado no texto.</p>
+  <ul class="sources">
+    <li><strong>Ministério da Saúde do Brasil.</strong> Diretrizes nacionais de planejamento reprodutivo e distribuição de métodos pelo SUS.</li>
+    <li><strong>Organização Mundial da Saúde (OMS).</strong> Critérios de elegibilidade médica e dados globais de eficácia contraceptiva.</li>
+    <li><strong>Organização Pan-Americana da Saúde (OPAS).</strong> Materiais educativos regionais sobre saúde sexual e reprodutiva.</li>
+    <li><strong>Febrasgo.</strong> Federação Brasileira das Associações de Ginecologia e Obstetrícia: recomendações clínicas para profissionais e pacientes.</li>
+  </ul>
+</section>
 
 </main>
 
-<dialog class="modal" id="methodModal" aria-labelledby="modalTitle">
-  <form method="dialog"><button class="modal-close" aria-label="Fechar detalhes">&times;</button></form>
-  <div class="modal-inner" id="modalContent"></div>
-</dialog>
-
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-brand">
-      <div class="brand-static">
-        <svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.55"/>
-        </svg>
-        <span class="brand-name">Entenda</span>
-      </div>
-      <p>Um guia educativo e independente sobre métodos contraceptivos, criado para ajudar pessoas a chegarem mais informadas à consulta com um profissional de saúde.</p>
-    </div>
-
-    <nav class="footer-nav" aria-labelledby="footer-nav-title">
-      <h2 class="footer-title" id="footer-nav-title">Navegação</h2>
-      <ul>
-        <li><a href="#metodos">Métodos</a></li>
-        <li><a href="#comparar">Comparar</a></li>
-        <li><a href="#mitos">Mitos e verdades</a></li>
-        <li><a href="#faq">Dúvidas frequentes</a></li>
-        <li><a href="#fontes">Fontes</a></li>
-      </ul>
-    </nav>
-
-    <div class="footer-sources">
-      <h2 class="footer-title">Referências</h2>
-      <ul>
-        <li>Ministério da Saúde</li>
-        <li>OMS</li>
-        <li>OPAS</li>
-        <li>Febrasgo</li>
-      </ul>
-    </div>
-
-    <div class="footer-notice">
-      <h2 class="footer-title">Aviso</h2>
-      <p>Este site tem finalidade exclusivamente educativa. As informações aqui apresentadas não substituem orientação médica individualizada.</p>
-    </div>
-  </div>
-
-  <div class="wrap footer-bottom">
-    <p>&copy; <span id="year"></span> Entenda. Conteúdo educativo sobre saúde sexual e reprodutiva.</p>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong></strong> Isto é um guia educativo e escolar sobre métodos contraceptivos. As informações não substituem orientação médica individualizada.</p>
+    <p class="small">&copy; <span id="year"></span> <a href="#topo">Voltar ao topo</a></p>
   </div>
 </footer>
 
-<script src="js/data.js" defer></script>
-<script src="js/main.js" defer></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
